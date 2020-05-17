@@ -1,0 +1,17 @@
+{
+  "name": "find-rates",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Vadiraj Purohit",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "node-fetch": "^2.6.0"
+  }
+}
