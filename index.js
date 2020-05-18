@@ -8,15 +8,20 @@ app.listen(port, () => {
 });
 app.use(express.static('public'));
 
-app.get('/rates', async(request, response) => {
+app.get('/deps', async(request, response) => {
 
-    const rate_url = 'https://api.ratesapi.io/api/latest';
-    const rate_response = await fetch(rate_url);
-    const rate_data = await rate_response.json();
+    const department_url = 'http://localhost:8181/department';
+    const dept_response = await fetch(department_url);
+    const data = await dept_response.json();
+
+    let department = data.department;
+    let employees = department.employees;
+
+    for (let i = 0; i < employees.length; i++) {
+      console.log(employees[i]);
+      
+    }
   
-    const data = {
-      rate_data
-    };
     response.json(data);
   });
 
